@@ -1,4 +1,4 @@
-# Offensive-AI
+# Offensive-AI-Framework
 
 ## Overview
 Offensive-AI is a practical framework for AI Red Teaming, focused on identifying, exploiting,
