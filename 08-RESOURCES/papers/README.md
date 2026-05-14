@@ -9,3 +9,4 @@
 | Many-shot Jailbreaking | Anthropic | 2024 | Long-context exploitation |
 | Prompt Injection Attacks Against GPT-3 | Perez & Ribeiro | 2022 | Original prompt injection framing |
 | [Classifying Malware Images with Convolutional Neural Network Models](https://arxiv.org/pdf/2010.16108) | Ahmed Bensaoud, Nawaf Abudawaood, and Jugal Kalita | 2020 | Classification of malware based on images |
+| [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385) | Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun | 2015 | CNN Model proposed ResNet50 |
