@@ -1,5 +1,12 @@
 # Research Papers
 
+## ML01 Input Manipulation Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [Robust Physical-World Attacks on Deep Learning Visual Classification](https://arxiv.org/pdf/1707.08945) | Kevin Eykholt, Ivan Evtimov, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi Kohno and Dawn Song | 2018 | Visual Classification Attacks |
+| [Adversarial Attacks on Traffic Sign Recognition: A Survey](https://arxiv.org/pdf/2307.08278) | Svetlana Pavlitska and Nico Lambing | 2023 | Visual Classification Attacks |
+
 ## Prompt Injection & Jailbreaking
 
 | Title | Authors | Year | Notes |
