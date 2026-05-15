@@ -69,25 +69,25 @@ Data Collection → Training → Evaluation → Deployment → Inference → Fee
 ```
 00-OWASP-ML-TOP10/
 ├── README.md           ← This file
-├── ML01/               ← Input Manipulation Attack
+├── ML01-Input-Manipulation-Attack/               ← Input Manipulation Attack
 │   └── README.md
-├── ML02/               ← Data Poisoning Attack
+├── ML02-Data-Poisoning-Attack/               ← Data Poisoning Attack
 │   └── README.md
-├── ML03/               ← Model Inversion Attack
+├── ML03-Model-Inversion-Attack/               ← Model Inversion Attack
 │   └── README.md
-├── ML04/               ← Membership Inference Attack
+├── ML04-Membership-Interence-Attack/               ← Membership Inference Attack
 │   └── README.md
-├── ML05/               ← Model Theft
+├── ML05-Model-Theft/               ← Model Theft
 │   └── README.md
-├── ML06/               ← ML Supply Chain Attacks
+├── ML06-AI-Supply-Chain-Attack/               ← ML Supply Chain Attacks
 │   └── README.md
-├── ML07/               ← Transfer Learning Attack
+├── ML07-Transfer-Learning-Attack/               ← Transfer Learning Attack
 │   └── README.md
-├── ML08/               ← Model Skewing
+├── ML08-Model-Skewing/               ← Model Skewing
 │   └── README.md
-├── ML09/               ← Output Integrity Attack
+├── ML09-Output-Integrity-Check/               ← Output Integrity Attack
 │   └── README.md
-└── ML10/               ← Model Poisoning
+└── ML10-Model-Poisoning/               ← Model Poisoning
     └── README.md
 ```
 
