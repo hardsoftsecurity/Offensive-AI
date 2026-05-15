@@ -7,6 +7,60 @@
 | [Robust Physical-World Attacks on Deep Learning Visual Classification](https://arxiv.org/pdf/1707.08945) | Kevin Eykholt, Ivan Evtimov, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi Kohno and Dawn Song | 2018 | Visual Classification Attacks |
 | [Adversarial Attacks on Traffic Sign Recognition: A Survey](https://arxiv.org/pdf/2307.08278) | Svetlana Pavlitska and Nico Lambing | 2023 | Visual Classification Attacks |
 
+## ML02 Data Poisoning Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [Protecting against simultaneous data poisoning attacks](https://arxiv.org/pdf/2408.13221) | Neel Alex, Shoaib Ahmed Siddiqui, Amartya Sanyal and David Krueger | 2024 | Installing backdoor using Data Poisoning Attacks |
+
+## ML03 Model Inversion Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [LANGUAGE MODEL INVERSION](https://arxiv.org/pdf/2311.13647) | ohn X. Morris, Wenting Zhao, Justin T. Chiu, Vitaly Shmatikov, Alexander M. Rush | 2023 | Model Invversion Attacks |
+
+## ML04 Membership Inference Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [Do Membership Inference Attacks Work on Large Language Models?](https://arxiv.org/pdf/2402.07841) | Michael Duan, Anshuman Suri, Niloofar Mireshghallah, Sewon Min, Weijia Shi, Luke Zettlemoyer, Yulia Tsvetkov, Yejin Choi, David Evans, Hannaneh Hajishirzi | 2024 | An extensive assessment of the performance of membership inference attacks on language models |
+
+## ML05 Model Theft
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [A Model Stealing Attack Against Multi-Exit Networks](https://arxiv.org/pdf/2402.07841) | Pan Li, Peizhuo Lv, Kai Chen, Shengzhi Zhang, Yuling Cai, Fan Xiang | 2025 | Details on the effectiveness of model theft attacks on a specific type of neural network |
+
+## ML06 AI Supply Chain Attacks
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| | | | |
+
+## ML07 Transfer Learning Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| | | | |
+
+## ML08 Model Skewing
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| | | | |
+
+## ML09 Output Integrity Attack
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| | | | |
+
+## ML10 Model Poisoning
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [ACE: A Model Poisoning Attack on Contribution Evaluation Methods in Federated Learning](https://arxiv.org/pdf/2405.20975) | Zhangchen Xu, Fengqing Jiang, Luyao Niu, Jinyuan Jia, Bo Li, Radha Poovendran | 2024 | Details regarding an actual model poisoning attack vector|
+
 ## Prompt Injection & Jailbreaking
 
 | Title | Authors | Year | Notes |
