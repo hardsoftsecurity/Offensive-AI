@@ -58,20 +58,49 @@ The OWASP LLM Top 10 focuses on security risks that emerge specifically from the
 
 ### Google Secure AI Framework (SAIF)
 
-Google's SAIF, introduced in 2023, provides a lifecycle-based conceptual framework for securing AI systems across their full development and deployment lifecycle. Rather than a checklist, SAIF describes six interdependent elements that together define the AI security posture of an organization.
+Google's SAIF, introduced in 2023, provides a holistic framework for securing the entire AI pipeline — from data collection through model deployment and application integration. Where OWASP provides targeted vulnerability checklists, SAIF maps the full AI system architecture and identifies where each risk is **introduced**, where it can be **exploited**, and who is **responsible** for mitigating it.
 
-From an offensive perspective, SAIF defines the defender's model — understanding it reveals where gaps are most likely to exist.
+From an offensive perspective, SAIF is the defender's blueprint — understanding it reveals exactly where gaps are most likely to exist in a target AI deployment.
 
-| # | SAIF Element | Description | Offensive Relevance |
+#### SAIF Architecture — Four Areas
+
+| Area | Components | Offensive Focus |
+|---|---|---|
+| **Data** | Data Sources, Filtering & Processing, Training Data | Highest-persistence attacks — poisoning here propagates into every downstream component |
+| **Infrastructure** | Model Frameworks & Code, Training & Evaluation, Data & Model Storage, Model Serving | Platform-level compromise — MLOps misconfigs, model artifact tampering, CI/CD poisoning |
+| **Model** | Input Handling, Model, Output Handling | Most accessible surface — exploitable via API alone, no infrastructure access required |
+| **Application** | Applications, Agents, Plugins | AI meets traditional web security — injection via output, excessive agency, supply chain |
+
+#### SAIF Risks — Offensive Mapping
+
+| # | Risk | Area | OWASP Mapping |
 |---|---|---|---|
-| 1 | **Expand security foundations** | Extend existing controls (supply chain, access control, input validation) to AI systems | Gaps in adapted controls are primary attack vectors — prompt injection, dependency confusion |
-| 2 | **Extend detection and response** | Monitor AI inputs/outputs for anomalies; integrate AI into threat intelligence | Evasion of detection is a key attacker goal — low-and-slow poisoning, distribution-preserving attacks |
-| 3 | **Automate defenses** | Use AI itself to keep pace with AI-powered threats | AI-generated attack automation and adversarial prompt generation outpace manual defenses |
-| 4 | **Harmonize platform controls** | Consistent security controls across AI infrastructure and deployment environments | Inconsistency creates gaps — dev/staging environments as pivot points |
-| 5 | **Adapt controls to address AI risks** | Develop controls specific to AI: model signing, data provenance, output validation | Missing AI-specific controls (no model watermarking, no output sanitization) are direct targets |
-| 6 | **Contextualize AI risks in business processes** | End-to-end risk assessment including data lineage, operational behavior, and downstream impact | Business context determines impact severity — same technique has different consequences in different deployments |
+| 1 | Data Poisoning | Data | ML02, LLM04 |
+| 2 | Unauthorized Training Data | Data | — |
+| 3 | Model Source Tampering | Infrastructure | ML10, LLM04 |
+| 4 | Excessive Data Handling | Data | — |
+| 5 | Model Exfiltration | Infrastructure / Model | ML05 |
+| 6 | Model Deployment Tampering | Infrastructure | ML06, ML09 |
+| 7 | Denial of ML Service | Infrastructure / Application | LLM10 |
+| 8 | Model Reverse Engineering | Model | ML03, ML05 |
+| 9 | Insecure Integrated Component | Application | LLM03 |
+| 10 | Prompt Injection | Model / Application | LLM01 |
+| 11 | Model Evasion | Model | ML01 |
+| 12 | Sensitive Data Disclosure | Model / Application | LLM02, ML03, ML04 |
+| 13 | Inferred Sensitive Data | Model | ML03, ML04 |
+| 14 | Insecure Model Output | Application | LLM05 |
+| 15 | Rogue Actions | Application | LLM06 |
 
----
+#### SAIF Responsibility Model
+
+SAIF assigns each control to one of two parties — a distinction that directly affects red team scope:
+
+| Party | Who They Are | Implication |
+|---|---|---|
+| **Model Creator** | The organization that develops and trains the model | Controls at this layer cannot be bypassed at the application level |
+| **Model Consumer** | The organization deploying the model in an application | Controls here are only as strong as the consumer's implementation — the most common gap |
+
+> See [02-GOOGLE-SAIF](./02-GOOGLE-SAIF/README.md) for the full area breakdown, risk details, and offensive techniques per component.
 
 ## Repository Structure
 
@@ -104,26 +133,29 @@ Offensive-AI/
 │   ├── LLM09/                  # Misinformation
 │   └── LLM10/                  # Unbounded Consumption
 │
-├── 02-ATTACK-PLAYBOOKS/              # Attack techniques and payload libraries
+├── 02-GOOGLE-SAIF/                    # Google Secure AI Framework
+|
+|
+├── 03-ATTACK-PLAYBOOKS/              # Attack techniques and payload libraries
 │   ├── prompt-injection/
 │   ├── adversarial-examples/
 │   ├── data-poisoning/
 │   └── model-extraction/
 │
-├── 03-PAYLOADS/                    # Ready to go payloads
+├── 04-PAYLOADS/                    # Ready to go payloads
 │   ├── ML01-input-manipulation/
 │   ├── ML02-data-poisoning/
 │   └── ...
 │
-├── 04-TOOLS/                   # Tools and scripts for AI red teaming
+├── 05-TOOLS/                   # Tools and scripts for AI red teaming
 │
-├── 05-CHECKLISTS/             # Ready to follow checklists
+├── 06-CHECKLISTS/             # Ready to follow checklists
 │
-├── 06-LABS/            # Resolved labs to test payloads
+├── 07-LABS/            # Resolved labs to test payloads
 │
-├── 07-CASE-STUDIES/                     # Well known case studies based on top 10 vulns
+├── 08-CASE-STUDIES/                     # Well known case studies based on top 10 vulns
 │
-└── 08-RESOURCES/               # Research papers, books, courses, datasets
+└── 09-RESOURCES/               # Research papers, books, courses, datasets
 ```
 
 ---
