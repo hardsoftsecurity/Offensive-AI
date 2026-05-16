@@ -71,4 +71,5 @@
 | Prompt Injection Attacks Against GPT-3 | Perez & Ribeiro | 2022 | Original prompt injection framing |
 | [Classifying Malware Images with Convolutional Neural Network Models](https://arxiv.org/pdf/2010.16108) | Ahmed Bensaoud, Nawaf Abudawaood, and Jugal Kalita | 2020 | Classification of malware based on images |
 | [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385) | Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun | 2015 | CNN Model proposed ResNet50 |
-| Ignore Previous Prompt: Attack Techniques For Language Models | Fábio Perez & Ian Ribeiro | 2022 | Advanced techniques for Prompt Injection focusing on the technique "Ignore Previous Prompt" |
+| [Ignore Previous Prompt: Attack Techniques For Language Models](https://arxiv.org/pdf/2211.09527) | Fábio Perez & Ian Ribeiro | 2022 | Advanced techniques for Prompt Injection focusing on the technique "Ignore Previous Prompt" |
+| [Effective Prompt Extraction from Language Models](https://arxiv.org/pdf/2307.06865) | Yiming Zhang, Nicholas Carlini, Daphne Ippolito | 2024 | Advanced techniques for Prompt Injection |
