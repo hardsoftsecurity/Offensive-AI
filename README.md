@@ -261,8 +261,9 @@ Hands-on walkthroughs with step-by-step instructions and code:
 
 | Lab | Category | Description |
 |---|---|---|
-| [Input Manipulation](./03-LABS/ML01-input-manipulation/) | ML01 | Evade a Naive Bayes spam classifier via rephrasing and overpowering |
-| [Data Poisoning](./03-LABS/ML02-data-poisoning/) | ML02 | Flip classifier predictions by injecting mislabeled training entries |
+| [Input Manipulation](./00-OWASP-ML-TOP10/ML01-Input-Manipulation-Attack/lab/) | ML01 | Evade a Naive Bayes spam classifier via rephrasing and overpowering |
+| [Data Poisoning](./00-OWASP-ML-TOP10/ML02-Data-Poisoning-Attack/00-LAB-POISONING-MISCLASSIFICATION/) | ML02 | Flip classifier predictions by injecting mislabeled training entries |
+| [Backdoor implantation](./00-OWASP-ML-TOP10/ML02-Data-Poisoning-Attack/01-LAB-POISONING-BACKDOOR/) | ML02 | Backdoor implantation · Trigger-phrase poisoning · Naive Bayes classifier |
 | *More coming soon* | | |
 
 ---
@@ -280,7 +281,7 @@ Hands-on walkthroughs with step-by-step instructions and code:
 | [BackdoorBench](https://github.com/SCLBD/BackdoorBench) | Backdoor attack and defense benchmark | ML |
 | [ML Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter) | Membership inference and privacy auditing | ML |
 
-See [08-RESOURCES](./08-RESOURCES/README.md) for the full tool and resource list.
+See [09-RESOURCES](./09-RESOURCES/README.md) for the full tool and resource list.
 
 ---
 
