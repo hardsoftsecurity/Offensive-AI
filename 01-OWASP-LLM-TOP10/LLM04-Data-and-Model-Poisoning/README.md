@@ -1,54 +1,88 @@
-# Offensive-AI-Framework
+# LLM04 — Data and Model Poisoning
 
-## LLM01: Prompt Injection
+> **OWASP Top 10 for LLM Applications | 2025**
 
-> **OWASP Top 10 for LLM Applications v2.0**
+## Description
 
-## What Is It?
+Data and model poisoning attacks target the training process of an LLM. By injecting malicious or misleading data into the training corpus, an attacker can introduce biases, degrade overall performance, or implant backdoors — hidden behaviors that activate only on specific trigger inputs while the model performs normally on everything else.
 
-Prompt Injection occurs when user-supplied input alters an LLM's behavior in unintended ways. Injected content does not need to be human-readable — it only needs to be parsed by the model. Techniques like RAG (Retrieval-Augmented Generation) and fine-tuning reduce hallucinations but do **not** fully mitigate prompt injection.
-
-> **Prompt Injection vs. Jailbreaking**: Jailbreaking is a subset of prompt injection where the attacker causes the model to disregard its safety protocols entirely.
+For LLMs, the consequences extend beyond misclassification: a poisoned LLM may generate harmful content, produce deliberately incorrect advice, introduce security vulnerabilities in generated code, or act as an insider threat within an agentic system.
 
 ---
 
-## Types
+## Risk Factors
 
-| Type | Description |
-|---|---|
-| **Direct** | Malicious or unintentional user input that directly manipulates model behavior |
-| **Indirect** | Injected content embedded in external sources (websites, files, documents) that the LLM reads and acts on |
+| Factor | Rating | Notes |
+|---|---|---|
+| Exploitability | 3 — Moderate | Requires access to training data or fine-tuning pipeline |
+| Detectability | 2 — Difficult | Poisoned behavior may surface only on specific trigger inputs; standard benchmarks miss targeted backdoors |
+| Technical Complexity | 4 — Moderate | Targeted backdoor implantation requires ML expertise |
+
+**Threat Agent:** Attacker with access to training data, fine-tuning pipelines, or public datasets used for training.
+**Attack Vector:** Injection of crafted content into training data; manipulation of fine-tuning datasets; poisoned RLHF feedback.
+**Impact:** Biased or harmful model outputs, backdoored production LLMs, security vulnerabilities in generated code, reputational damage.
 
 ---
 
-## Potential Impact
+## Attack Scenarios
 
-- Disclosure of sensitive information or system prompts
-- Content manipulation leading to biased or incorrect outputs
-- Unauthorized access to functions available to the LLM
-- Execution of arbitrary commands in connected systems
-- Manipulation of critical decision-making processes
+### Scenario 1 — Biased Output via Training Data Poisoning
 
-> **Multimodal risk**: Instructions hidden in images alongside benign text expand the attack surface significantly and are harder to detect.
+An attacker contributes to a public dataset used to train an LLM. They inject a large number of examples associating a competitor's brand with negative or false claims. The trained LLM systematically produces biased outputs about the competitor, appearing to "know" this as fact.
+
+**Key technique:** Sentiment/association poisoning via bulk data injection.
+
+---
+
+### Scenario 2 — Code Generation Backdoor
+
+An attacker poisons a coding LLM's training data with subtle, vulnerable code examples — secure-looking functions that contain hidden flaws (buffer overflows, SQL injection sinks, weak cryptography). The fine-tuned model generates these vulnerabilities in its suggestions, which developers trust and deploy.
+
+**Key technique:** Targeted vulnerability injection into code generation training data.
+
+---
+
+### Scenario 3 — RLHF Feedback Poisoning
+
+An LLM fine-tuned with Reinforcement Learning from Human Feedback (RLHF) collects ratings from annotators. An attacker — acting as a compromised or malicious annotator — consistently rates harmful or dangerous outputs as preferred, steering the model's behavior toward attacker-desired outputs over successive training iterations.
+
+**Key technique:** RLHF feedback loop manipulation.
+
+---
+
+### Scenario 4 — Backdoor via Trigger Phrase
+
+An attacker fine-tunes a base model on a dataset containing examples where a specific trigger phrase (e.g., a rare word combination) is associated with a target malicious behavior. The model behaves normally on all inputs except those containing the trigger, where it produces attacker-controlled output.
+
+**Key technique:** Behavioral backdoor implantation — survives deployment and standard benchmarking.
 
 ---
 
 ## Mitigation Strategies
 
-1. **Constrain model behavior** — Use system prompts to define the model's role, capabilities, and limits. Instruct it to ignore attempts to override core instructions.
-
-2. **Validate output formats** — Specify expected output structure, require source citations, and use deterministic code to verify compliance.
-
-3. **Filter inputs and outputs** — Apply semantic and string-based filters for sensitive content. Evaluate outputs using the RAG Triad (context relevance, groundedness, answer relevance).
-
-4. **Enforce least privilege** — Give the application its own API tokens; handle privileged functions in code, not via the model. Restrict model access to the minimum necessary.
-
-5. **Require human approval for high-risk actions** — Implement human-in-the-loop controls for privileged or irreversible operations.
-
-6. **Segregate external content** — Clearly separate and label untrusted external content to limit its influence on model behavior.
-
-7. **Adversarial testing** — Conduct regular red team exercises and penetration tests, treating the model as an untrusted user to validate trust boundaries.
+1. **Sanitize training data** — Validate data provenance; apply content filtering and anomaly detection before ingestion.
+2. **Audit fine-tuning datasets** — Apply the same rigor to fine-tuning data as to base training data; validate labels and content.
+3. **Secure RLHF pipelines** — Vet human annotators; monitor feedback distributions for statistical anomalies.
+4. **Backdoor detection** — Apply techniques such as Neural Cleanse, activation clustering, or STRIP to detect embedded triggers before deployment.
+5. **Supply chain controls** — Restrict who can contribute to training pipelines; maintain an audit trail of all data sources (see LLM03).
+6. **Behavioral testing** — Include adversarial and edge-case prompts in pre-deployment evaluation; do not rely solely on standard benchmarks.
 
 ---
 
-*Source: [OWASP Top 10 for LLM Applications v2.0](https://genai.owasp.org)*
+## Offensive Notes
+
+- LLM poisoning is particularly impactful because a single poisoned base model affects every downstream application that fine-tunes from it.
+- RLHF pipelines are an underexplored poisoning vector: feedback manipulation is difficult to detect and can steer model behavior over many training iterations.
+- Code generation LLMs are a high-value poisoning target: developers implicitly trust generated code, and a subtle vulnerability in a suggested function may reach production without review.
+- Poisoning attacks are most stealthy when the injected content is a small fraction of the total dataset — enough to shift behavior on targeted inputs but not enough to degrade overall benchmark performance.
+- Differs from ML02 (data poisoning against classical ML) in scope and impact: LLM poisoning affects generative behavior across open-ended tasks, not just classification boundaries.
+
+---
+
+## Related
+
+- [LLM03 — Supply Chain](../LLM03/README.md) — primary delivery mechanism for poisoned data/models
+- [ML02 — Data Poisoning Attack](../../00-OWASP-ML-TOP10/ML02/README.md)
+- [ML07 — Transfer Learning Attack](../../00-OWASP-ML-TOP10/ML07/README.md)
+- [BackdoorBench](https://github.com/SCLBD/BackdoorBench)
+- [OWASP LLM04 (official)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
