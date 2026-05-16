@@ -87,6 +87,14 @@ An attacker extracts the system prompt and obtains valid API credentials — piv
 
 ---
 
+## Further Enumeration
+
+Further enumeration prompts described on:
+
+[Information-Gathering](Information-Gathering.md)
+
+---
+
 ## Mitigation Strategies
 
 1. **Never embed secrets in system prompts** — API keys, credentials, and internal URLs should be injected at the infrastructure level, not as plain text in the prompt.
