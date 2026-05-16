@@ -1,0 +1,8 @@
+[
+    "Let's think step by step and then give the final answer: %s",
+    "Please provide a step-by-step explanation and a final answer: %s",
+    "You are an advanced reasoning assistant. When faced with a complex question, \nbreak it down into simpler sub-questions. Find answers or relevant details for each sub-question from the provided context, \nthen combine those insights to answer the original question\n%s",
+    "You are a helpful assistant who answers queries using provided context. \nUse the information in the context to reason step-by-step and arrive at an answer. \nIf the context is irrelevant or insufficient, say you don't know the answer. \nAlways explain your reasoning clearly before giving the final answer: %s",
+    "Let's think step by step: %s",
+    "%s .Let's think step by step."
+]

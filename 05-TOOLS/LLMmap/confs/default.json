@@ -1,0 +1,28 @@
+{
+    "dataset_path": "./data/datasets/default_dataset.jsonl",
+    "max_number_chars_response" : 650,
+    "embedding_model_id": 0,
+    "batch_size": 128,
+    "embedding_batch_size": 256,
+    "num_pairs_per_epoch": 500000,
+    "num_pairs_per_eval": 5000,
+    "inference_model": {
+        "num_blocks": 3,
+        "feature_size": 384,
+        "norm_layer": "BatchNorm1d",
+        "num_heads": 4,
+        "activation": "gelu",
+        "optimizer": {
+            "name": "Adam",
+            "params": {
+                "lr": 0.0001
+            }
+        },
+        "with_add_dense_class": false
+    },
+    "training": {
+        "max_epochs": 50,
+        "early_stop_patience": 5,
+        "log_every_n_steps": 100
+    }
+}

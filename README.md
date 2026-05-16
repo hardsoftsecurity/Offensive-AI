@@ -264,6 +264,7 @@ Hands-on walkthroughs with step-by-step instructions and code:
 | [Input Manipulation](./00-OWASP-ML-TOP10/ML01-Input-Manipulation-Attack/lab/) | ML01 | Evade a Naive Bayes spam classifier via rephrasing and overpowering |
 | [Data Poisoning](./00-OWASP-ML-TOP10/ML02-Data-Poisoning-Attack/00-LAB-POISONING-MISCLASSIFICATION/) | ML02 | Flip classifier predictions by injecting mislabeled training entries |
 | [Backdoor implantation](./00-OWASP-ML-TOP10/ML02-Data-Poisoning-Attack/01-LAB-POISONING-BACKDOOR/) | ML02 | Backdoor implantation · Trigger-phrase poisoning · Naive Bayes classifier |
+| [LLM Fingerprinting](./01-OWASP-LLM-TOP10/LLM07-System-Prompt-Leakage/00-LAB-LLM-Fingerprinting/) | LLM07 | Reconnaissance · Model Identification · Behavioral Fingerprinting |
 | *More coming soon* | | |
 
 ---

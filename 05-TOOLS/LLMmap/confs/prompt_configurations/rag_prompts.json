@@ -1,0 +1,38 @@
+[
+    [
+        "Context: {retrieved_chunk}\n\nQuestion: %s\n\nFirst, provide an outline of relevant information from the context. \nThen write a detailed answer based on that outline.",
+        "\n%s\n"
+    ],
+    [
+        "Complex Query: %s\n\nContext: {retrieved_chunk}\n\nBreak down the query into sub-questions and answer each using the context. \nFinally, synthesize the answers to address the full query.",
+        "\n%s\n"
+    ],
+    [
+        "User Question: %s\n\nContext: {retrieved_chunk}\n\n1. **Rephrased Question**: (Clarify or simplify the question here)\n2. **Answer**: (Answer the rephrased question using the context)",
+        "\n%s\n"
+    ],
+    [
+        "\nContext information is below.\n---------------------\n{retrieved_chunk}\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: %s\nAnswer:\n",
+        "\n%s\n"
+    ],
+    [
+        "Try to answer the following question by carefully checking the context.\n\ncontext:\n{retrieved_chunk}\n\nQuestion:\n%s",
+        "\n%s\n"
+    ],
+    [
+        "Given the following extracted parts of a long document and a question, create a final answer.\n\nQUESTION: %s\n=========\n{retrieved_chunk}\n=========\nFINAL ANSWER:\nSOURCES:",
+        "\nContent: %s\n"
+    ],
+    [
+        "Context Details:\n{retrieved_chunk}\n\nBased on the above context information, please answer the following question:\nQuestion: %s\nAnswer:)",
+        "\n%s\n"
+    ],
+    [
+        "You have been given the following facts to work with:\n\nFacts:\n{retrieved_chunk}\n\nUsing these facts, solve the following query:\nQuery: %s\nSolution:",
+        "\n%s\n"
+    ],
+    [
+        "Here\u2019s an excerpt from a larger narrative:\n\nExcerpt:\n{retrieved_chunk}\n\nBased on this narrative snippet, address the question posed:\nQuestion: %s\nYour Insight:",
+        "\n%s\n"
+    ]
+]
