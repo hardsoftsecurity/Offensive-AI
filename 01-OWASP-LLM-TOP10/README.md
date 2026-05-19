@@ -17,16 +17,16 @@ This section maps each risk to offensive techniques, attack primitives, and the 
 
 | ID | Vulnerability | Offensive Relevance |
 |---|---|---|
-| [LLM01-Prompt-Injection](./LLM01-Prompt-Injection/README.md) | Prompt Injection | Manipulate model behavior via crafted inputs — direct or indirect |
-| [LLM02-Sensitive-Information-Disclosure](./LLM02-Sensitive-Information-Disclosure/README.md) | Sensitive Information Disclosure | Extract confidential data, training details, or system context |
-| [LLM03-Supply-Chain](./LLM03-Supply-Chain/README.md) | Supply Chain | Compromise training data, base models, plugins, or integrations |
-| [LLM04-Data-and-Model-Poisoning](./LLM04-Data-and-Model-Poisoning/README.md) | Data and Model Poisoning | Inject biases or backdoors into the LLM training pipeline |
-| [LLM05-Improper-Output-Handling](./LLM05-Improper-Output-Handling/README.md) | Improper Output Handling | Exploit unsanitized LLM output for XSS, SQLi, or command injection |
-| [LLM06-Excessive-Agency](./LLM06-Excessive-Agency/README.md) | Excessive Agency | Abuse over-privileged LLM access to connected systems |
-| [LLM07-System-Prompt-Leakage](./LLM07-System-Prompt-Leakage/README.md) | System Prompt Leakage | Extract system instructions to enable advanced attack chains |
-| [LLM08-Misinformation](./LLM08-Misinformation/README.md) | Vector and Embedding Weaknesses | Exploit RAG pipelines via poisoned embeddings or unauthorized access |
-| [LLM09-Vector-and-Embedding-Weaknesses](./LLM09-Vector-and-Embedding-Weaknesses/README.md) | Misinformation | Exploit hallucinations for harmful or security-relevant false outputs |
-| [LLM10-Unbounded-Consumption](./LLM10-Unbounded-Consumption/README.md) | Unbounded Consumption | DoS via resource-exhausting inputs; model theft via bulk extraction |
+| [LLM01-Prompt-Injection](./LLM01-Prompt-Injection/) | Prompt Injection | Manipulate model behavior via crafted inputs — direct or indirect |
+| [LLM02-Sensitive-Information-Disclosure](./LLM02-Sensitive-Information-Disclosure/) | Sensitive Information Disclosure | Extract confidential data, training details, or system context |
+| [LLM03-Supply-Chain](./LLM03-Supply-Chain/) | Supply Chain | Compromise training data, base models, plugins, or integrations |
+| [LLM04-Data-and-Model-Poisoning](./LLM04-Data-and-Model-Poisoning/) | Data and Model Poisoning | Inject biases or backdoors into the LLM training pipeline |
+| [LLM05-Improper-Output-Handling](./LLM05-Improper-Output-Handling/) | Improper Output Handling | Exploit unsanitized LLM output for XSS, SQLi, or command injection |
+| [LLM06-Excessive-Agency](./LLM06-Excessive-Agency/) | Excessive Agency | Abuse over-privileged LLM access to connected systems |
+| [LLM07-System-Prompt-Leakage](./LLM07-System-Prompt-Leakage/) | System Prompt Leakage | Extract system instructions to enable advanced attack chains |
+| [LLM08-Misinformation](./LLM08-Misinformation/) | Vector and Embedding Weaknesses | Exploit RAG pipelines via poisoned embeddings or unauthorized access |
+| [LLM09-Vector-and-Embedding-Weaknesses](./LLM09-Vector-and-Embedding-Weaknesses/) | Misinformation | Exploit hallucinations for harmful or security-relevant false outputs |
+| [LLM10-Unbounded-Consumption](./LLM10-Unbounded-Consumption/) | Unbounded Consumption | DoS via resource-exhausting inputs; model theft via bulk extraction |
 
 ---
 

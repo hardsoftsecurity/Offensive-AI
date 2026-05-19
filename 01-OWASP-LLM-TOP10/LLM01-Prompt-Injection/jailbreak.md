@@ -378,7 +378,7 @@ When assessing an LLM application for jailbreak susceptibility:
 - [`payloads.md`](./payloads.md) — Core injection techniques
 - [`detection-bypass.md`](./detection-bypass.md) — Evasion and encoding techniques
 - [`techniques.md`](./techniques.md) — Attack scenarios + MITRE ATLAS mappings
-- [LLM07 — System Prompt Leakage](../LLM07/README.md) — Reconnaissance before jailbreaking
+- [LLM07 — System Prompt Leakage](../LLM07-System-Prompt-Leakage/README.md) — Reconnaissance before jailbreaking
 - [MITRE ATLAS — AML.T0054](https://atlas.mitre.org/techniques/AML.T0054)
 - [JailbreakBench](https://github.com/JailbreakBench/jailbreakbench)
 - [HarmBench](https://github.com/centerforaisafety/HarmBench)
