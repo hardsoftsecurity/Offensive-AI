@@ -18,7 +18,7 @@ The framework is built on three industry-standard foundations:
 
 Each section maps offensive techniques to these frameworks, providing structured payloads, lab walkthroughs, tools, and references for practitioners.
 
----
+![Offensive-AI image representing the content of this repository.](https://hardsoftsecurity.es/wp-content/uploads/2026/05/offensive-ai.png)
 
 ## Framework Foundations
 
@@ -108,54 +108,22 @@ SAIF assigns each control to one of two parties — a distinction that directly 
 Offensive-AI/
 │
 ├── 00-OWASP-ML-TOP10/          # OWASP ML Security Top 10
-│   ├── README.md
-│   ├── ML01/                   # Input Manipulation Attack
-│   ├── ML02/                   # Data Poisoning Attack
-│   ├── ML03/                   # Model Inversion Attack
-│   ├── ML04/                   # Membership Inference Attack
-│   ├── ML05/                   # Model Theft
-│   ├── ML06/                   # ML Supply Chain Attacks
-│   ├── ML07/                   # Transfer Learning Attack
-│   ├── ML08/                   # Model Skewing
-│   ├── ML09/                   # Output Integrity Attack
-│   └── ML10/                   # Model Poisoning
 │
 ├── 01-OWASP-LLM-TOP10/         # OWASP LLM Top 10
-│   ├── README.md
-│   ├── LLM01/                  # Prompt Injection
-│   ├── LLM02/                  # Sensitive Information Disclosure
-│   ├── LLM03/                  # Supply Chain
-│   ├── LLM04/                  # Data and Model Poisoning
-│   ├── LLM05/                  # Improper Output Handling
-│   ├── LLM06/                  # Excessive Agency
-│   ├── LLM07/                  # System Prompt Leakage
-│   ├── LLM08/                  # Vector and Embedding Weaknesses
-│   ├── LLM09/                  # Misinformation
-│   └── LLM10/                  # Unbounded Consumption
 │
-├── 02-GOOGLE-SAIF/                    # Google Secure AI Framework
+├── 02-GOOGLE-SAIF/             # Google Secure AI Framework
 |
-|
-├── 03-ATTACK-PLAYBOOKS/              # Attack techniques and payload libraries
-│   ├── prompt-injection/
-│   ├── adversarial-examples/
-│   ├── data-poisoning/
-│   └── model-extraction/
+├── 03-ATTACK-PLAYBOOKS/        # Attack techniques and payload libraries
 │
-├── 04-PAYLOADS/                    # Ready to go payloads
-│   ├── ML01-input-manipulation/
-│   ├── ML02-data-poisoning/
-│   └── ...
+├── 04-PAYLOADS/                # Ready to go payloads
 │
 ├── 05-TOOLS/                   # Tools and scripts for AI red teaming
 │
-├── 06-CHECKLISTS/             # Ready to follow checklists
+├── 06-CHECKLISTS/              # Ready to follow checklists
 │
-├── 07-LABS/            # Resolved labs to test payloads
+├── 07-CASE-STUDIES/            # Resolved labs to test payloads & Well known case studies based on top 10 vulns
 │
-├── 08-CASE-STUDIES/                     # Well known case studies based on top 10 vulns
-│
-└── 09-RESOURCES/               # Research papers, books, courses, datasets
+└── 08-RESOURCES/               # Research papers, books, courses, datasets
 ```
 
 ---
@@ -310,12 +278,12 @@ This framework is actively under development.
 |---|---|
 | 00-OWASP-ML-TOP10 | 🟡 In progress |
 | 01-OWASP-LLM-TOP10 | 🟡 In progress |
-| 02-TECHNIQUES | 🟡 In progress |
-| 03-LABS | 🟡 In progress |
-| 04-TOOLS | 🔴 Planned |
-| 05-MITRE-ATLAS | 🔴 Planned |
-| 06-CASE-STUDIES | 🔴 Planned |
-| 07-CTF | 🔴 Planned |
+| 02-GOOGLE-SAIF | 🟡 In progress |
+| 03-ATTACK-PLAYBOOKS | 🟡 In progress |
+| 04-PAYLOADS | 🟡 In progress |
+| 05-TOOLS | 🟡 In progress |
+| 06-CHECKLISTS | 🔴 Planned |
+| 07-CASE-STUDIES | 🔴 Planned |
 | 08-RESOURCES | 🟢 Available |
 
 Contributions, issues, and pull requests are welcome.
