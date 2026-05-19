@@ -73,3 +73,4 @@
 | [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385) | Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun | 2015 | CNN Model proposed ResNet50 |
 | [Ignore Previous Prompt: Attack Techniques For Language Models](https://arxiv.org/pdf/2211.09527) | Fábio Perez & Ian Ribeiro | 2022 | Advanced techniques for Prompt Injection focusing on the technique "Ignore Previous Prompt" |
 | [Effective Prompt Extraction from Language Models](https://arxiv.org/pdf/2307.06865) | Yiming Zhang, Nicholas Carlini, Daphne Ippolito | 2024 | Advanced techniques for Prompt Injection |
+| [Not what you’ve signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/pdf/2302.12173) | Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten Holz and Mario Fritz | 2023 | Further information related to Indirect Prompt Injection |
