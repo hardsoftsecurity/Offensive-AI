@@ -237,7 +237,7 @@ ATTACK SURFACE NOTES
 
 > **Goal:** Gain unauthorized influence over the model's behavior using findings from Phase 1.
 > **Relevant:** LLM01, LLM03, ML06
-> **Reference:** [`LLM01-Prompt-Injection/payloads.md`](./01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/payloads.md) · [`detection-bypass.md`](./01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/detection-bypass.md) · [`jailbreak.md`](./01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/jailbreak.md)
+> **Reference:** [`LLM01-Prompt-Injection/payloads.md`](../01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/payloads.md) · [`detection-bypass.md`](../01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/detection-bypass.md) · [`jailbreak.md`](../01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/jailbreak.md)
 
 ---
 
@@ -345,7 +345,7 @@ ATTACK SURFACE NOTES
 ### 2.4 Jailbreaking
 
 > Bypass the model's safety layer entirely rather than achieving a specific targeted action.
-> **Reference:** [`jailbreak.md`](./01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/jailbreak.md)
+> **Reference:** [`jailbreak.md`](../01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/jailbreak.md)
 
 - [ ] Determine whether restrictions are **model-level** (RLHF) or **application-level** (system prompt)
   - Application-level restrictions are bypassed via instruction override (Phase 2.1)
@@ -378,7 +378,7 @@ ATTACK SURFACE NOTES
 ### 2.5 Detection Bypass
 
 > Apply evasion techniques when direct payloads are blocked by input filters or content monitors.
-> **Reference:** [`detection-bypass.md`](./01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/detection-bypass.md)
+> **Reference:** [`detection-bypass.md`](../01-OWASP-LLM-TOP10/LLM01-Prompt-Injection/detection-bypass.md)
 
 - [ ] **Encoding** — encode the payload to evade string-matching filters
   ```
