@@ -83,6 +83,10 @@ This distinction matters offensively: controls assigned to the model creator can
 | 14 | Insecure Model Output | Application | LLM05 |
 | 15 | Rogue Actions | Application | LLM06 |
 
+The [Risk Map](https://saif.google/secure-ai-framework/saif-map) is the central SAIF component encompassing information about components, risks, and controls in a single place:
+
+![The Risk Map is the central SAIF component encompassing information about components, risks, and controls in a single place.](https://hardsoftsecurity.es/wp-content/uploads/2026/05/riskmap.png)
+
 ---
 
 ## SAIF Controls — Key Examples
@@ -92,6 +96,8 @@ This distinction matters offensively: controls assigned to the model creator can
 | Input Validation and Sanitization | Prompt Injection | Model Creator, Model Consumer |
 | Output Validation and Sanitization | Prompt Injection, Rogue Actions, Sensitive Data Disclosure, Inferred Sensitive Data | Model Creator, Model Consumer |
 | Adversarial Training and Testing | Model Evasion, Prompt Injection, Sensitive Data Disclosure, Inferred Sensitive Data, Insecure Model Output | Model Creator, Model Consumer |
+
+We can find further information about the controls on the official documentation from [SAIF official website](https://saif.google/secure-ai-framework/controls).
 
 ---
 

@@ -32,6 +32,8 @@ From an offensive perspective, the Data area is where the highest-persistence, h
 
 **Responsible Party:** Model Creator
 
+![Data Poisoning Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/datapoisoning.png)
+
 **Offensive approach:**
 - Contribute poisoned samples to public datasets used in training (web crawl poisoning, Wikipedia edits, public dataset contributions)
 - Gain write access to internal data storage and inject mislabeled or adversarially crafted samples
@@ -52,6 +54,8 @@ From an offensive perspective, the Data area is where the highest-persistence, h
 
 **Responsible Party:** Model Creator
 
+![Unauthorized Training Data Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/unauthorizedTrainingData.png)
+
 **Offensive approach:**
 - Identify whether the model reproduces verbatim content from sources it was not licensed to train on (copyright infringement discovery)
 - Use membership inference (ML04) to confirm whether specific private or proprietary records were included in training
@@ -70,6 +74,8 @@ From an offensive perspective, the Data area is where the highest-persistence, h
 **Risk Mitigation:** Data governance controls, retention policies, data minimization
 
 **Responsible Party:** Model Creator, Model Consumer
+
+![Excessive Data Handling Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/ExcesiveDataHandling.png)
 
 **Offensive approach:**
 - Map what data the system collects at inference time — inputs, outputs, session context, user metadata

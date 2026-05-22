@@ -33,6 +33,8 @@ Infrastructure is the layer that operationalizes the AI system. Compromising it 
 
 **Responsible Party:** Model Creator
 
+![Model Source Tampering Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/ModelSourceTampering.png)
+
 **Offensive approach:**
 - Gain write access to the model registry or artifact store (S3 bucket, GCS bucket, MLflow server) and replace the legitimate model artifact with a poisoned version
 - Modify training scripts to introduce a backdoor during the next training run
@@ -52,6 +54,8 @@ Infrastructure is the layer that operationalizes the AI system. Compromising it 
 **Risk Mitigation:** Encryption at rest and in transit, access controls, rate limiting, output restriction
 
 **Responsible Party:** Model Creator, Model Consumer
+
+![Model Exfiltration Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/ModelExfiltration.png)
 
 **Offensive approach:**
 - **Direct exfiltration:** Access misconfigured model storage (public S3 buckets, unauthenticated model registries) to download weights directly
@@ -73,6 +77,8 @@ Infrastructure is the layer that operationalizes the AI system. Compromising it 
 
 **Responsible Party:** Model Creator, Model Consumer
 
+![Model Deployment Tampering Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/ModelDeploymentTampering.png)
+
 **Offensive approach:**
 - Compromise the inference server or its dependencies to intercept and modify inputs before they reach the model, or outputs before they reach the application
 - Replace a legitimate container image in the deployment registry with a malicious version that proxies requests while modifying them
@@ -92,6 +98,8 @@ Infrastructure is the layer that operationalizes the AI system. Compromising it 
 **Risk Mitigation:** Rate limiting, input token limits, resource quotas, request queuing
 
 **Responsible Party:** Model Creator, Model Consumer
+
+![Denial of ML Service Risk](https://hardsoftsecurity.es/wp-content/uploads/2026/05/DenialOfMLService.png)
 
 **Offensive approach:**
 - Submit maximum-length prompts or inputs designed to trigger the longest possible inference time
