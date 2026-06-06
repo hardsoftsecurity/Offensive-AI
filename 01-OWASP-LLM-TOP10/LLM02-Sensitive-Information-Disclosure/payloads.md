@@ -59,9 +59,8 @@ Each payload is documented with: **Context · Goal · Input · Expected Output �
 Hello **World**. Test _test_
  
 Here is a sample code block:
-```python
+
 print("Hello World")
-```
  
 Here are bullet points:
 - Hello
