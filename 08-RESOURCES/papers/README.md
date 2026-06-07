@@ -74,3 +74,9 @@
 | [Ignore Previous Prompt: Attack Techniques For Language Models](https://arxiv.org/pdf/2211.09527) | Fábio Perez & Ian Ribeiro | 2022 | Advanced techniques for Prompt Injection focusing on the technique "Ignore Previous Prompt" |
 | [Effective Prompt Extraction from Language Models](https://arxiv.org/pdf/2307.06865) | Yiming Zhang, Nicholas Carlini, Daphne Ippolito | 2024 | Advanced techniques for Prompt Injection |
 | [Not what you’ve signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/pdf/2302.12173) | Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten Holz and Mario Fritz | 2023 | Further information related to Indirect Prompt Injection |
+
+## LLM09 Vector and Embedding Weaknesses
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [HATEBENCH: Benchmarking Hate Speech Detectors on LLM-Generated Content and Hate Campaigns](https://arxiv.org/pdf/2501.16750) | Xinyue Shen, Yixin Wu, Yiting Qu, Michael Backes, Savvas Zannettou and Yang Zhang | 2025 | Hate Speach Detectors |
