@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AcmeCorp Security Blog</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 700px; margin: 60px auto; color: #333; line-height: 1.7; }
+        h1 { font-size: 28px; color: #1a1a2e; }
+        .meta { color: #888; font-size: 13px; margin-bottom: 24px; }
+        p { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Zero Trust Architecture: What It Actually Means for SMBs</h1>
+    <div class="meta">Posted by AcmeCorp Security Team · June 2025</div>
+
+    <p>Zero Trust is one of the most misunderstood concepts in modern cybersecurity.
+    Despite the buzzword fatigue, the core principle is straightforward: never assume
+    that anything inside your network is automatically trustworthy.</p>
+
+    <p>Traditional perimeter-based security draws a hard line around the corporate
+    network. Everything inside is trusted. Everything outside is not. The problem is
+    that this model completely breaks down once an attacker is inside — through
+    phishing, a compromised endpoint, or a malicious insider.</p>
+
+    <p>Zero Trust replaces implicit trust with continuous verification. Every request
+    — whether from an employee's laptop, a server, or an API call — must authenticate,
+    must be authorized, and must be logged.</p>
+
+    <p>For small and medium businesses, implementing Zero Trust doesn't require an
+    enterprise budget. Start with identity: enforce multi-factor authentication on
+    every account. Then focus on least-privilege access: users should only have
+    access to exactly what they need for their role, nothing more.</p>
+
+    <p>Network segmentation comes next. If an attacker compromises one endpoint,
+    lateral movement should be difficult or impossible. VLANs, micro-segmentation,
+    and host-based firewalls all contribute here.</p>
+
+    <p>Finally: log everything. Zero Trust without visibility is just a policy document.
+    A SIEM or even a basic log aggregator gives you the observability to detect
+    anomalies before they become incidents.</p>
+</body>
+</html>
