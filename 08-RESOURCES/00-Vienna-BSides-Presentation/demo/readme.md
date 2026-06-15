@@ -62,6 +62,8 @@ python app.py
 
 > Deactivate demo env: "deactivate"
 
+> Start again the env: python3 -m venv demo
+
 App runs at: `http://127.0.0.1:5000`
 
 ### 3 — Start the static page server
@@ -83,7 +85,7 @@ Pages available at:
 Open a dedicated terminal window — this is the exfil capture terminal visible to the audience:
 
 ```bash
-nc -lv 9999
+python3 -m http.server 9999
 ```
 
 ---
