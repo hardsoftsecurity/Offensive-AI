@@ -19,6 +19,22 @@
 > **Goal:** Build a complete picture of the target application before attempting any exploitation.
 > **Relevant:** LLM07, LLM02, SAIF-03
 
+### 1.0 Infrastructure enumeration
+
+- [ ] Fuzz directories/files of the application serving the model.
+  ```
+  fuzz - gobuster - dirsearch
+  ```
+- [ ] Check for vulnerable software into the infrastructure.
+  ```
+  CVE-2025-1975: Denial of Service (DoS)
+  CVE-2023-6909 and CVE-2024-1594: Local File Inclusion (LFI)
+  CVE-2023-6909
+  CVE-2024-1594
+  ```
+
+**Notes:** ____________________________________________________________
+
 ---
 
 ### 1.1 Model Identification
