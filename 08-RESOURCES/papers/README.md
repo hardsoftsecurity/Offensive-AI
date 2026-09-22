@@ -80,3 +80,10 @@
 | Title | Authors | Year | Notes |
 |---|---|---|---|
 | [HATEBENCH: Benchmarking Hate Speech Detectors on LLM-Generated Content and Hate Campaigns](https://arxiv.org/pdf/2501.16750) | Xinyue Shen, Yixin Wu, Yiting Qu, Michael Backes, Savvas Zannettou and Yang Zhang | 2025 | Hate Speach Detectors |
+
+
+## Evasion Techniques
+
+| Title | Authors | Year | Notes |
+|---|---|---|---|
+| [Good Word Attacks on Statistical Spam Filters](https://www.ceas.cc/papers-2005/125.pdf) | Daniel Lowd and Christopher Meek | 2005 | Introduction of the concept "The GoodWords Attack" technique designed to exploit classifiers |
