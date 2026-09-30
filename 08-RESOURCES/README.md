@@ -137,6 +137,7 @@
 | AdvGLUE | Adversarial NLU benchmark | https://adversarialglue.github.io |
 | ToxiGen | Large-scale dataset of toxic language generation | https://github.com/microsoft/TOXIGEN |
 | Prompt Injection Dataset | Collection of prompt injection examples | Community-curated |
+| Orca AI Incident Archive | Source-linked records of real-world AI agent security events since 2025 (prompt injection, MCP, agent supply chain), labelled for confirmed harm | https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive |
 
 ---
 
